@@ -12,22 +12,20 @@ namespace Week2Day3
         {
             string upperCaseGreeting = greeting.ToUpper();
             bool containsLetter = false;
-            string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            foreach (char c in greeting)
-            {
-                foreach (char letter in alphabet)
-                {
-                    if (c.Equals(letter))
-                    {
-                        containsLetter = true;
-                        break;
-                    }
-                }
-            }
+
             if (string.IsNullOrWhiteSpace(greeting))
             {
                 return "Fine. Be that way!";
             }
+            foreach (char letter in upperCaseGreeting)
+            {
+                if (letter >= 'A' && letter <= 'Z')
+                {
+                    containsLetter = true;
+                    break;
+                }
+            }
+
             if (greeting == upperCaseGreeting && containsLetter)
             {
                 return "Whoa, chill out!";
