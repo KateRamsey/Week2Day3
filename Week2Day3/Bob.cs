@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Week2Day3
 {
-    class Bob
+    public class Bob
     {
+        public string hey(string greeting)
+        {
+            return "Whatever";
+        }
     }
 }
