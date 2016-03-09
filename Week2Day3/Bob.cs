@@ -10,7 +10,28 @@ namespace Week2Day3
     {
         public string hey(string greeting)
         {
-            return "Whatever";
+            string upperCaseGreeting = greeting.ToUpper();
+            bool allSpaces = true;
+            foreach(char c in greeting)
+            {
+                if(c != ' ')
+                {
+                    allSpaces = false;
+                }
+            }
+            if(allSpaces)
+            {
+                return "Fine. Be that way!";
+            }
+            if(greeting == upperCaseGreeting)
+            {
+                return "Whoa, chill out!";
+            }
+            if (greeting.EndsWith("?"))
+            {
+                return "Sure.";
+            }
+            return "Whatever.";
         }
     }
 }
