@@ -14,6 +14,7 @@ namespace Week2Day3
             string remark = "";
             remark = "WATCH OUT!";
             Console.WriteLine(bob.hey(remark));
+            Console.WriteLine("\t\t\t\t\t");
 
             Console.ReadLine();
         }
