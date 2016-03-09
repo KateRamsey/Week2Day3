@@ -10,6 +10,12 @@ namespace Week2Day3
     {
         static void Main(string[] args)
         {
+            Bob bob = new Bob();
+            string remark = "";
+            remark = "WATCH OUT!";
+            Console.WriteLine(bob.hey(remark));
+
+            Console.ReadLine();
         }
     }
 }

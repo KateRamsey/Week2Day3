@@ -12,18 +12,27 @@ namespace Week2Day3
         {
             string upperCaseGreeting = greeting.ToUpper();
             bool allSpaces = true;
-            foreach(char c in greeting)
+            bool containsLetter = false;
+            string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            foreach(char c in greeting.ToCharArray())
             {
                 if(c != ' ')
                 {
                     allSpaces = false;
+                }
+                foreach (char letter in alphabet.ToCharArray())
+                {
+                    if(c.Equals(letter))
+                    {
+                        containsLetter = true;
+                    }
                 }
             }
             if(allSpaces)
             {
                 return "Fine. Be that way!";
             }
-            if(greeting == upperCaseGreeting)
+            if (greeting == upperCaseGreeting && containsLetter)
             {
                 return "Whoa, chill out!";
             }
@@ -31,6 +40,8 @@ namespace Week2Day3
             {
                 return "Sure.";
             }
+
+
             return "Whatever.";
         }
     }
