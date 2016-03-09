@@ -11,16 +11,16 @@ namespace Week2Day3
         public string hey(string greeting)
         {
             string upperCaseGreeting = greeting.ToUpper();
-            bool allSpaces = true;
             bool containsLetter = false;
             string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            foreach (char c in greeting.ToCharArray())
+            foreach (char c in greeting)
             {
-                foreach (char letter in alphabet.ToCharArray())
+                foreach (char letter in alphabet)
                 {
                     if (c.Equals(letter))
                     {
                         containsLetter = true;
+                        break;
                     }
                 }
             }
