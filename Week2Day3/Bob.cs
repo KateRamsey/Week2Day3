@@ -14,21 +14,17 @@ namespace Week2Day3
             bool allSpaces = true;
             bool containsLetter = false;
             string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            foreach(char c in greeting.ToCharArray())
+            foreach (char c in greeting.ToCharArray())
             {
-                if(c != ' ')
-                {
-                    allSpaces = false;
-                }
                 foreach (char letter in alphabet.ToCharArray())
                 {
-                    if(c.Equals(letter))
+                    if (c.Equals(letter))
                     {
                         containsLetter = true;
                     }
                 }
             }
-            if(allSpaces)
+            if (string.IsNullOrWhiteSpace(greeting))
             {
                 return "Fine. Be that way!";
             }
@@ -40,8 +36,6 @@ namespace Week2Day3
             {
                 return "Sure.";
             }
-
-
             return "Whatever.";
         }
     }
